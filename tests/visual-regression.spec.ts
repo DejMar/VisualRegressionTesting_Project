@@ -20,16 +20,16 @@ import { VisualTestConfig } from '../src/types/visual-regression.types';
 const urlsToTest: VisualTestConfig[] = [
   // Example 1: Basic homepage test
   {
-    name: 'my-homepage',
-    url: 'https://example.com',
+    name: 'ap-homepage',
+    url: 'https://www.authoritypartners.com',
     fullPage: true,
     threshold: 0.1
   },
 
   // Example 2: Page with custom viewport (mobile)
   {
-    name: 'my-homepage-mobile',
-    url: 'https://example.com',
+    name: 'ap-homepage-mobile',
+    url: 'https://www.authoritypartners.com',
     viewport: {
       width: 375,
       height: 667
@@ -40,8 +40,8 @@ const urlsToTest: VisualTestConfig[] = [
 
   // Example 3: Page that waits for specific element
   {
-    name: 'products-page',
-    url: 'https://example.com/products',
+    name: 'ap-services-page',
+    url: 'https://authoritypartners.com/services/',
     waitForSelector: '.products-grid',  // Wait for this element to load
     fullPage: true,
     threshold: 0.15
@@ -50,7 +50,7 @@ const urlsToTest: VisualTestConfig[] = [
   // Example 4: Page with ignored dynamic regions
   {
     name: 'homepage-no-ads',
-    url: 'https://example.com',
+    url: 'https://www.authoritypartners.com',
     fullPage: true,
     threshold: 0.1,
     ignoreRegions: [
