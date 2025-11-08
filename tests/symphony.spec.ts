@@ -9,10 +9,25 @@ const urlsToTest: VisualTestConfig[] = [
       fullPage: true,
       threshold: 0.1
     },
-  
     {
       name: 'symphony-homepage-mobile',
       url: 'https://www.symphony.is',
+      viewport: {
+        width: 375,
+        height: 667
+      },
+      fullPage: true,
+      threshold: 0.2
+    },
+    {
+      name: 'symphony-who-we-are-page',
+      url: 'https://www.symphony.is/who-we-are',
+      fullPage: true,
+      threshold: 0.1
+    },
+    {
+      name: 'symphony-who-we-are-page-mobile',
+      url: 'https://www.symphony.is/who-we-are',
       viewport: {
         width: 375,
         height: 667
