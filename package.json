@@ -1,0 +1,36 @@
+{
+  "name": "visual-regression-framework",
+  "version": "1.0.0",
+  "description": "Visual regression testing framework with Playwright and TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "playwright test",
+    "test:update": "ts-node src/cli/run-visual-tests.ts update",
+    "test:compare": "ts-node src/cli/run-visual-tests.ts compare",
+    "test:run": "ts-node src/cli/run-visual-tests.ts test",
+    "build": "tsc",
+    "clean": "rm -rf visual-tests/current visual-tests/diff",
+    "clean:all": "rm -rf visual-tests"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.4",
+    "playwright": "^1.40.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  },
+  "dependencies": {
+    "pixelmatch": "^5.3.0",
+    "pngjs": "^7.0.0"
+  },
+  "keywords": [
+    "visual-regression",
+    "playwright",
+    "testing",
+    "screenshot",
+    "comparison"
+  ]
+}
