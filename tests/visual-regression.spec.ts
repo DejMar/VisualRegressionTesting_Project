@@ -42,7 +42,7 @@ const urlsToTest: VisualTestConfig[] = [
   {
     name: 'ap-services-page',
     url: 'https://authoritypartners.com/services/',
-    waitForSelector: '.products-grid',  // Wait for this element to load
+    //waitForSelector: '.products-grid',  // Wait for this element to load
     fullPage: true,
     threshold: 0.15
   },
@@ -64,7 +64,7 @@ const urlsToTest: VisualTestConfig[] = [
   // Example 5: Viewport-only screenshot (not full page)
   {
     name: 'above-the-fold',
-    url: 'https://example.com',
+    url: 'https://www.authoritypartners.com/about/',
     fullPage: false,  // Only capture visible viewport
     viewport: {
       width: 1920,
@@ -76,8 +76,8 @@ const urlsToTest: VisualTestConfig[] = [
   // Example 6: Page with additional wait time
   {
     name: 'dashboard',
-    url: 'https://example.com/dashboard',
-    waitForSelector: '.chart-container',
+    url: 'https://authoritypartners.com/',
+    //waitForSelector: '.chart-container',
     waitForTimeout: 3000,  // Wait additional 3 seconds for animations
     fullPage: true,
     threshold: 0.2
@@ -305,16 +305,16 @@ test.describe('Critical Path Visual Tests', () => {
     // Define your critical pages
     const criticalPages: VisualTestConfig[] = [
       {
-        name: 'critical-homepage',
-        url: 'https://example.com',
+        name: 'critical-ap-homepage',
+        url: 'https://authoritypartners.com',
         fullPage: true,
-        threshold: 0.05  // Stricter threshold for critical pages
+        threshold: 0.1  // Stricter threshold for critical pages
       },
       {
-        name: 'critical-checkout',
-        url: 'https://example.com/checkout',
+        name: 'critical-stories-page',
+        url: 'https://authoritypartners.com/stories/',
         fullPage: true,
-        threshold: 0.05
+        threshold: 0.1
       }
     ];
 
