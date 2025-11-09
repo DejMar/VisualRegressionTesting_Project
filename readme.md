@@ -18,39 +18,6 @@ A comprehensive visual regression testing framework built with Playwright and Ty
 npm install
 \`\`\`
 
-## Project Structure
-
-\`\`\`
-visual-regression-framework/
-├── src/
-│   ├── types/
-│   │   └── visual-regression.types.ts    # TypeScript interfaces
-│   ├── config/
-│   │   └── visual-regression.config.ts   # Configuration constants
-│   ├── utils/
-│   │   ├── path.utils.ts                 # Path operations
-│   │   ├── image.utils.ts                # Image processing
-│   │   └── logger.utils.ts               # Console logging
-│   ├── core/
-│   │   ├── screenshot.capture.ts         # Screenshot capture logic
-│   │   ├── image.comparator.ts           # Image comparison
-│   │   └── visual.tester.ts              # Main test orchestrator
-│   ├── reporters/
-│   │   ├── console.reporter.ts           # Console output
-│   │   └── html.reporter.ts              # HTML report generation
-│   ├── cli/
-│   │   └── run-visual-tests.ts           # CLI entry point
-│   └── index.ts                          # Public API exports
-├── tests/
-│   └── visual-regression.spec.ts         # Playwright test suite
-├── visual-tests/
-│   ├── baseline/                         # Baseline images (committed to git)
-│   ├── current/                          # Current screenshots (temporary)
-│   ├── diff/                             # Difference images (temporary)
-│   └── reports/                          # HTML reports
-└── package.json
-\`\`\`
-
 ## Usage
 
 ### 1. Define Test Configurations
