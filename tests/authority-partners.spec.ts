@@ -53,4 +53,49 @@ test.describe('Visual Smoke Test', () => {
       const result = await tester.runTests(smokeTestPages, 'test');
       expect(result.failed).toBe(0);
     });
+
+    test('Verify AP Stories Page', async () => {
+      // Quick smoke test with only critical pages
+      const smokeTestPages: VisualTestConfig[] = [
+        {
+          name: 'authority-partners-stories-page',
+          url: 'https://www.authoritypartners.com/stories/',
+          fullPage: false,  // Faster - viewport only
+          threshold: 0.2   // More lenient for smoke tests
+        }
+      ];
+  
+      const result = await tester.runTests(smokeTestPages, 'test');
+      expect(result.failed).toBe(0);
+    });
+
+    test('Verify AP Careers Page', async () => {
+      // Quick smoke test with only critical pages
+      const smokeTestPages: VisualTestConfig[] = [
+        {
+          name: 'authority-partners-careers-page',
+          url: 'https://www.authoritypartners.com/careers/',
+          fullPage: false,  // Faster - viewport only
+          threshold: 0.2   // More lenient for smoke tests
+        }
+      ];
+  
+      const result = await tester.runTests(smokeTestPages, 'test');
+      expect(result.failed).toBe(0);
+    });
+
+    test('Verify AP About Us Page', async () => {
+      // Quick smoke test with only critical pages
+      const smokeTestPages: VisualTestConfig[] = [
+        {
+            name: 'authority-partners-about-page',
+            url: 'https://www.authoritypartners.com/about/',
+          fullPage: false,  // Faster - viewport only
+          threshold: 0.2   // More lenient for smoke tests
+        }
+      ];
+  
+      const result = await tester.runTests(smokeTestPages, 'test');
+      expect(result.failed).toBe(0);
+    });
   });
